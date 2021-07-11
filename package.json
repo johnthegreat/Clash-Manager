@@ -1,0 +1,37 @@
+{
+  "name": "textreminderservice",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "clash-of-clans-api": "^0.6.3",
+    "cleave.js": "^1.6.0",
+    "cookie-parser": "^1.4.5",
+    "countable": "^3.0.1",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "eventemitter3": "^4.0.4",
+    "express": "~4.16.1",
+    "handlebars": "^4.7.6",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "^4.1.1",
+    "helmet": "^3.23.3",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "moment": "^2.27.0",
+    "morgan": "~1.9.1",
+    "node-schedule": "^1.3.2",
+    "sqlite3": "^4.2.0",
+    "twilio": "^3.47.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "grunt": "^1.2.0",
+    "grunt-terser": "^1.0.0"
+  }
+}

@@ -1,0 +1,76 @@
+<style>
+	#addScheduledMessageBtn {
+		cursor: pointer;
+		color: white;
+	}
+
+	[data-role="cancelScheduledMessage"] {
+		cursor: pointer;
+	}
+
+	[data-role='editBtn'] {
+		cursor: pointer;
+	}
+</style>
+
+<script src="/js/widgets/ComponentScheduledMessagesWidget{{#eq env 'production'}}.min{{/eq}}.js"></script>
+<script src="/js/widgets/ComponentUserListWidget{{#eq env 'production'}}.min{{/eq}}.js"></script>
+<script src="/js/index{{#eq env 'production'}}.min{{/eq}}.js"></script>
+
+<h1>Clash Manager</h1>
+<input type="hidden" name="clanId" value="{{clanId}}">
+
+<div class="row">
+	<div class="col-lg-6">
+		<div class="panel panel-primary" id="userListWidget">
+			<div class="panel-heading">
+				Players (<span id="numPlayersInClan">0</span>/<span id="maxPlayersInClan">50</span>)
+
+				<span class="pull-right">
+					<i class="glyphicon glyphicon-refresh" style="cursor: pointer;" id="refreshBtn" title="Refresh from Clash of Clans API"></i>
+				</span>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Phone Number</th>
+							<th>Actions</th>
+						</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				Scheduled Messages
+
+				<div class="pull-right">
+					<a id="addScheduledMessageBtn">Add</a>
+				</div>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive" id="scheduledMessagesWidget">
+					<table class="table table-striped">
+						<thead>
+						<tr>
+							<th>Scheduled At</th>
+							<th>To</th>
+							<th>Message</th>
+							<th>Actions</th>
+						</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

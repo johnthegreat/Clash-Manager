@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{title}}</title>
+
+	<link rel="shortcut icon" href="/favicon.png">
+
+	<script src="/node_modules/moment/min/moment.min.js"></script>
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/node_modules/lodash/lodash.min.js"></script>
+	<script src="/node_modules/handlebars/dist/handlebars.min.js"></script>
+	<script src="/node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="/node_modules/eventemitter3/umd/eventemitter3.min.js"></script>
+	<script src="/node_modules/cleave.js/dist/cleave.min.js"></script>
+	<script src="/node_modules/countable/Countable.min.js"></script>
+
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/node_modules/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+	<script src="/js/AjaxManager{{#eq env 'production'}}.min{{/eq}}.js"></script>
+
+	<script src="/js/modals/CreatePlayer{{#eq env 'production'}}.min{{/eq}}.js"></script>
+	<script src="/js/modals/CreateScheduledMessage{{#eq env 'production'}}.min{{/eq}}.js"></script>
+	<script src="/js/modals/EditPlayer{{#eq env 'production'}}.min{{/eq}}.js"></script>
+</head>
+<body>
+	<div class="container">
+		{{{body}}}
+	</div>
+</body>
+</html>

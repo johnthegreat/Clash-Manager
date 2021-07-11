@@ -1,0 +1,4 @@
+.env
+*.min.js
+.idea/
+node_modules/

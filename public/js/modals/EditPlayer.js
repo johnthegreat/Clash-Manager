@@ -15,7 +15,7 @@ function EditPlayerModal(player,saveCallback) {
 		let $errorContainer = modal.element.find('#errorContainer');
 		this.element.find('button#saveBtn').on('click',function() {
 			$errorContainer.find('ul > li').remove();
-			$errorContainer.addClass('hide');
+			$errorContainer.hide();
 
 			const object = modal.getObject();
 			const errors = modal.validate(object);
@@ -24,7 +24,7 @@ function EditPlayerModal(player,saveCallback) {
 					saveCallback(object);
 				}
 			} else {
-				$errorContainer.removeClass('hide');
+				$errorContainer.show();
 				_.each(errors,function(error) {
 					$errorContainer.find('ul').append($('<li>').text(error));
 				});

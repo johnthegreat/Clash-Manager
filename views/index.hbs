@@ -1,7 +1,6 @@
 <style>
 	#addScheduledMessageBtn {
 		cursor: pointer;
-		color: white;
 	}
 
 	[data-role="cancelScheduledMessage"] {
@@ -22,15 +21,15 @@
 
 <div class="row">
 	<div class="col-lg-6">
-		<div class="panel panel-primary" id="userListWidget">
-			<div class="panel-heading">
+		<div class="card" id="userListWidget">
+			<div class="card-header">
 				Players (<span id="numPlayersInClan">0</span>/<span id="maxPlayersInClan">50</span>)
 
-				<span class="pull-right">
-					<i class="glyphicon glyphicon-refresh" style="cursor: pointer;" id="refreshBtn" title="Refresh from Clash of Clans API"></i>
+				<span class="float-right">
+					<i class="fas fa-sync-alt" style="cursor: pointer;" id="refreshBtn" title="Refresh from Clash of Clans API"></i>
 				</span>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<div class="table-responsive">
 					<table class="table table-striped">
 						<thead>
@@ -48,15 +47,15 @@
 	</div>
 
 	<div class="col-lg-6">
-		<div class="panel panel-primary">
-			<div class="panel-heading">
+		<div class="card">
+			<div class="card-header">
 				Scheduled Messages
 
-				<div class="pull-right">
+				<div class="float-right">
 					<a id="addScheduledMessageBtn">Add</a>
 				</div>
 			</div>
-			<div class="panel-body">
+			<div class="card-body">
 				<div class="table-responsive" id="scheduledMessagesWidget">
 					<table class="table table-striped">
 						<thead>

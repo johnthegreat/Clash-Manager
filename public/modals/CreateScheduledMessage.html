@@ -1,37 +1,39 @@
-<div class="modal fade" tabindex="-1" role="dialog">
-	<div class="modal-dialog" role="document">
+<div class="modal" tabindex="-1">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title">Create Scheduled Message</h4>
+				<h5 class="modal-title">Create Scheduled Message</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 			<div class="modal-body">
-				<div class="alert alert-danger hide" id="errorContainer"><ul></ul></div>
+				<div class="alert alert-danger" id="errorContainer" style="display: none;"><ul></ul></div>
 
 				<form id="createPlayerForm">
 					<div class="form-group">
-						<label class="control-label" for="scheduledAt">Scheduled At</label>
-						<input type="text" name="scheduledAt" id="scheduledAt" class="form-control" required>
+						<label for="scheduledAt">Scheduled At</label>
+						<input type="text" name="scheduledAt" id="scheduledAt" class="form-control" data-toggle="datetimepicker" required>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="player">Player</label>
+						<label for="player">Player</label>
 						<select name="player" id="player" class="form-control" required></select>
-						<div class="help-block">
-							<i class="glyphicon glyphicon-info-sign"></i>
+						<div class="text-muted">
+							<i class="fas fa-info-circle"></i>
 							Only players with phone numbers will be listed here.
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label class="control-label" for="message">Message</label>
+						<label for="message">Message</label>
 						<textarea name="message" id="message" class="form-control" required maxlength="160"></textarea>
-						<div class="help-block pull-right"><span id="numChars">0</span> character(s) used.</div>
+						<div class="text-muted float-right"><span id="numChars">0</span> character(s) used.</div>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 				<button type="button" class="btn btn-primary" id="saveBtn">Save</button>
 			</div>
 		</div>

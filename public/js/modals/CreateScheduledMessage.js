@@ -15,9 +15,8 @@ function CreateScheduledMessageModal(saveCallback) {
 
 		const $errorContainer = modal.element.find('#errorContainer');
 		modal.element.find('button#saveBtn').on('click', function () {
-			modal.element.find('.form-group').removeClass('has-success has-warning has-error');
 			$errorContainer.find('ul > li').remove();
-			$errorContainer.addClass('hide');
+			$errorContainer.hide();
 
 			const object = modal.getObject();
 			const errors = modal.validate(object);
@@ -26,7 +25,7 @@ function CreateScheduledMessageModal(saveCallback) {
 					saveCallback(object);
 				}
 			} else {
-				$errorContainer.removeClass('hide');
+				$errorContainer.show();
 				_.each(errors, function (error) {
 					$errorContainer.find('ul').append($("<li>").text(error));
 				});

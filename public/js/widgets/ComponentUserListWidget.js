@@ -1,7 +1,7 @@
 const ComponentUserListWidget = function(element) {
 	'use strict';
 	this.element = element;
-	const template = Handlebars.compile('<tr data-id="{{uuid}}"><td>{{name}}</td><td>{{phoneNumber}}</td><td><a data-role="editBtn">Edit</a></td></tr>');
+	const template = Handlebars.compile('<tr data-id="{{uuid}}"><td>{{name}}</td><td>{{phoneNumber}}</td><td><a data-role="editBtn" role="button">Edit</a></td></tr>');
 
 	this.addRow = function(object) {
 		this.element.find('table > tbody').append(template(object));

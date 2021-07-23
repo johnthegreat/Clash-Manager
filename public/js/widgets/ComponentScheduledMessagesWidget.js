@@ -1,7 +1,7 @@
 const ComponentScheduledMessagesWidget = function(element) {
 	'use strict';
 	this.element = element;
-	const template = Handlebars.compile('<tr data-id="{{uuid}}"><td>{{scheduledAt}}</td><td>{{resolved.player.name}}</td><td>{{message}}</td><td><a data-role="cancelScheduledMessage">Cancel</a></td></tr>');
+	const template = Handlebars.compile('<tr data-id="{{uuid}}"><td>{{scheduledAt}}</td><td>{{resolved.player.name}}</td><td>{{message}}</td><td><a data-role="cancelScheduledMessage" role="button">Cancel</a></td></tr>');
 
 	this.addRow = function(object) {
 		if (!_.isEmpty(object['scheduledAt'])) {
